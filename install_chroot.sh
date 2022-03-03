@@ -1,9 +1,9 @@
 #!/bin/bash
-uefi=$(cat /var_uefi); hd=$(cat /var_hd)
+uefi=$(cat /var_uefi); hd=$(cat /var_hd);
 
 cat /comp > /etc/hostname && rm /comp
 
-pacman --noconfirm -S dialog
+pacman -S --noconfirm dialog
 
 pacman -S --noconfirm grub
 

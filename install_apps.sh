@@ -5,7 +5,7 @@ name=$(cat /tmp/user_name)
 apps_path="/tmp/apps.csv"
 
 curl https://raw.githubusercontent.com/jjbnunez\
-    /arch_installer/master/apps.csv > $apps_path
+    /arch_installer/main/apps.csv > $apps_path
 
 apps=("essential" "Essentials" on
       "network" "Network" on
@@ -69,6 +69,6 @@ done
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 curl https://raw.githubusercontent.com/jjbnunez\
-    /arch_installer/master/install_user.sh > /tmp/install_user.sh;
+    /arch_installer/main/install_user.sh > /tmp/install_user.sh;
 
 sudo -u "$name" sh /tmp/install_user.sh

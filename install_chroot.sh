@@ -1,4 +1,5 @@
 #!/bin/bash
+
 uefi=$(cat /var_uefi); hd=$(cat /var_hd);
 
 cat /comp > /etc/hostname && rm /comp
@@ -16,10 +17,16 @@ else
     grub-install "$hd"
 fi
 
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# Set hardware clock from system clock
 hwclock --systohc
 
+# To list the timezones: `timedatectl list-timezones`
 timedatectl set-timezone "US/Eastern"
 
+# Replace en_US.UTF-8 with whatever locale you want.
+# You can run `cat /etc/locale.gen` to see all the locales available
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
@@ -40,17 +47,19 @@ function config_user() {
     while [ "$(cat pass1)" != "$(cat pass2)" ]
     do
         dialog --no-cancel --passwordbox \
-            "The passwords do not mtch.\n\nEnter your password again." \
+            "The passwords do not match.\n\nEnter your password again." \
             10 60 2> pass1
         dialog --no-cancel --passwordbox \
             "Retype your password." \
             10 60 2> pass2
     done
+
     name=$(cat name) && rm name
     pass1=$(cat pass1) && rm pass1 pass2
 
     # Create user if doesn't exist
     if [[ ! "$(id -u "$name" 2> /dev/null)" ]]; then
+        dialog --infobox "Adding user $name..." 4 50
         useradd -m -g wheel -s /bin/bash "$name"
     fi
 
@@ -68,6 +77,7 @@ dialog --title "Add user" \
     10 60
 config_user
 
+# Save your username for the next script.
 echo "$name" > /tmp/user_name
 
 dialog --title "Continue installation" --yesno \

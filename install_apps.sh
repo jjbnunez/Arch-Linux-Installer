@@ -7,6 +7,11 @@ apps_path="/tmp/apps.csv"
 curl https://raw.githubusercontent.com/jjbnunez\
 /arch_installer/main/apps.csv > $apps_path
 
+dialog --title "Welcome!" \
+    --msgbox "Welcome to the install script for your apps and dotfiles!" \
+    10 60
+
+# Allow the user to select the group of packages they want to install
 apps=("essential" "Essentials" on
       "network" "Network" on
       "tools" "Nice tools to have (highly recommended)" on
@@ -17,8 +22,8 @@ apps=("essential" "Essentials" on
       "zsh" "The Z-Shell (zsh)" on
       "neovim" "Neovim" on
       "urxvt" "URxvt" on
-      "firefox" "Firefox (browser)" off
-      "js" "JavaScript tooling" off)
+      "firefox" "Firefox (browser)" on
+      "js" "JavaScript tooling" on)
 
 dialog --checklist \
     "You can now choose what group of application you want to install. \n\n\
@@ -28,6 +33,7 @@ dialog --checklist \
 
 choices=$(cat app_choices) && rm app_choices
 
+# Create a regex to only select the packages we want
 selection="^$(echo $choices | sed -e 's/ /,|^/g'),"
 lines=$(grep -E "$selection" "$apps_path")
 count=$(echo "$lines" | wc -l)

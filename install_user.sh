@@ -3,8 +3,10 @@
 mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
 
-#localectl --no-convert set-x11-keymap <country_code>
+# Uncomment to set the keymap you want. Replace "fr" with your country code
+#localectl --no-convert set-x11-keymap fr
 
+# A function that can install any package from the AUR without using `yay`
 aur_install() {
     curl -O "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" \
     && tar -xvf "$1.tar.gz" \
@@ -14,6 +16,9 @@ aur_install() {
     && rm -rf "$1" "$1.tar.gz"
 }
 
+# A function that tries to install an AUR package using `yay`
+# If `yay` is not yet present, it installs the package using
+# the above `aur_install()` shellscript function
 aur_check() {
     qm=$(pacman -Qm | awk '{print $1}')
     for arg in "$@"

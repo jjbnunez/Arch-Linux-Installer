@@ -125,7 +125,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Persist important values for the next script
 echo "$uefi" > /mnt/var_uefi
 echo "$hd" > /mnt/var_hd
-mv comp /mnt/comp
+echo "$comp" > /mnt/comp
 
 curl https://raw.githubusercontent.com/jjbnunez\
 /arch_installer/main/install_chroot.sh > /mnt/install_chroot.sh

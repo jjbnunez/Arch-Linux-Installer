@@ -23,7 +23,8 @@ apps=("essential" "Essentials" on
       "neovim" "Neovim" on
       "urxvt" "URxvt" on
       "firefox" "Firefox (browser)" on
-      "js" "JavaScript tooling" on)
+      "js" "JavaScript tooling" on
+      "rclone" "Cloud storage client")
 
 dialog --checklist \
     "You can now choose what group of application you want to install. \n\n\

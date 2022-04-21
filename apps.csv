@@ -36,6 +36,6 @@ neovim,ruby-neovim,Ruby for neovim (AUR)
 neovim,nodejs-neovim,Nodejs for neovim (AUR)
 js,nodejs,Nodejs (for coc.vim)
 js,yarn,Dependency manager (for coc.vim)
-urxvt,rxvt-unicode,Terminal Urxvt
+urxvt,rxvt-unicode-truecolor-wide-glyphs,Terminal Urxvt
 urxvt,urxvt-tabbedex-mina86-git,Improved tabs for Urxvt (AUR)
 firefox,firefox,Browser Firefox

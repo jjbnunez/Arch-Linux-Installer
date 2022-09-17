@@ -146,7 +146,7 @@ echo "$hd" > /mnt/var_hd
 echo "$comp" > /mnt/comp
 
 curl https://raw.githubusercontent.com/jjbnunez\
-/arch_installer/main/install_chroot.sh > /mnt/install_chroot.sh
+/Arch-Linux-Installer/main/install_chroot.sh > /mnt/install_chroot.sh
 
 arch-chroot /mnt bash install_chroot.sh
 

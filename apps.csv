@@ -2,6 +2,10 @@ essential,xorg,X server
 essential,xorg-xinit,Display server boot
 essential,man,Manual
 essential,man-pages,Manual pages
+audio,alsa-utils,Barebones ALSA utilities
+audio,pulseaudio,Pulse Audio
+audio,pamixer,Console Pulse Audio controller
+audio,pavucontrol,GUI Pulse Audio controller
 network,openssh,Remote login tool for SSH protocol
 network,networkmanager,Network manager
 tools,rsync,Synchronizing files across computers

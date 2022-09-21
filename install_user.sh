@@ -1,7 +1,10 @@
 #!/bin/bash
 
+mkdir -p "/home/$(whoami)/Desktop"
 mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
+mkdir -p "/home/$(whoami)/Pictures"
+mkdir -p "/home/$(whoami)/Repos"
 
 # Uncomment to set the keymap you want. Replace "fr" with your country code
 #localectl --no-convert set-x11-keymap fr

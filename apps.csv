@@ -12,7 +12,7 @@ tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
 tools,xsel,Manipulate the X selection
 tools,fzf,Command line fuzzy finder
-tools,scrot,Screenshot software
+tools,maim,Screenshot software
 tools,udiskie,Automount devices
 tools,lxappearance,Theme switcher for GTK+
 tools,xcape,Configure modifier keys to act as other keys

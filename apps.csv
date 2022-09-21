@@ -11,6 +11,7 @@ network,networkmanager,Network manager
 tools,rsync,Synchronizing files across computers
 tools,arandr,xrandr GUI
 tools,xsel,Manipulate the X selection
+tools,xclip,X clipboard
 tools,fzf,Command line fuzzy finder
 tools,maim,Screenshot software
 tools,udiskie,Automount devices

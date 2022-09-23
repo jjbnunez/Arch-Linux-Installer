@@ -9,6 +9,7 @@ audio,pavucontrol,GUI Pulse Audio controller
 network,openssh,Remote login tool for SSH protocol
 network,networkmanager,Network manager
 tools,rsync,Synchronizing files across computers
+tools,unzip,Unzip zip files
 tools,arandr,xrandr GUI
 tools,xsel,Manipulate the X selection
 tools,xclip,X clipboard
@@ -19,7 +20,6 @@ tools,lxappearance,Theme switcher for GTK+
 tools,xcape,Configure modifier keys to act as other keys
 tools,ripgrep,Faster alternative to grep
 tools,htop,Interactive process viewer
-tools,lxappearance,GTK appearance editor
 tools,keepassxc,Password manager
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files

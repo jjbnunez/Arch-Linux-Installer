@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+pacman-key --init
+pacman-key --populate
 
 # REMINDER: Never run pacman -Sy on your system!
 pacman -Sy dialog --noconfirm

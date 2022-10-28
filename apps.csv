@@ -3,11 +3,14 @@ essential,xorg-xinit,Display server boot
 essential,man,Manual
 essential,man-pages,Manual pages
 audio,alsa-utils,Barebones ALSA utilities
-audio,pulseaudio,Pulse Audio
+audio,pipewire,PipeWire
+audio,pipewire-pulse,Replacement for Pulse Audio and Pulse Audio Bluetooth
 audio,pamixer,Console Pulse Audio controller
 audio,pavucontrol,GUI Pulse Audio controller
 network,openssh,Remote login tool for SSH protocol
 network,networkmanager,Network manager
+network,bluez,Bluetooth management
+network,bluez-utils,Bluetooth management
 tools,rsync,Synchronizing files across computers
 tools,unzip,Unzip zip files
 tools,arandr,xrandr GUI
@@ -21,6 +24,7 @@ tools,xcape,Configure modifier keys to act as other keys
 tools,ripgrep,Faster alternative to grep
 tools,htop,Interactive process viewer
 tools,keepassxc,Password manager
+tools,zathura,PDF reader
 tmux,tmux,Terminal multiplexer
 tmux,tmuxp,Configure tmux session + windows + panes via config files
 notifier,dunst,Notification system
@@ -28,9 +32,10 @@ notifier,libnotify,Notifier
 git,git,Version control system
 git,diff-so-fancy,Human readable git diff
 i3,i3-wm,i3 window tile manager
+i3,i3blocks,Status output for i3
 i3,i3status,i3 status bar
 i3,i3lock,i3 lock monitor
-i3,dmenu,Dynamic menu for X
+i3,rofi,Dynamic menu for X
 i3,feh,X11 image viewer
 i3,arc-gtk-theme,Desktop themes
 zsh,zsh,Unix shell (Z-Shell)
@@ -45,4 +50,5 @@ js,nodejs-lts-gallium,Nodejs (for coc.vim)
 js,yarn,Dependency manager (for coc.vim)
 urxvt,rxvt-unicode,Terminal Urxvt
 urxvt,urxvt-tabbedex-mina86-git,Improved tabs for Urxvt (AUR)
+urxvt,urxvt-resize-font-git,Font resizer (AUR)
 firefox,firefox,Browser Firefox

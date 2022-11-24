@@ -50,6 +50,5 @@ js,nodejs-lts-gallium,Nodejs (for coc.vim)
 js,yarn,Dependency manager (for coc.vim)
 urxvt,rxvt-unicode,Terminal Urxvt
 urxvt,rxvt-unicode-terminfo,Terminfo for rxvt
-urxvt,urxvt-tabbedex,Improved tabs for Urxvt (AUR)
 urxvt,urxvt-resize-font-git,Font resizer (AUR)
 firefox,firefox,Browser Firefox
